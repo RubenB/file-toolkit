@@ -19,7 +19,7 @@ yargs
             });
         },
         handler: (argv) => {
-            const file = __dirname + path.sep + argv.file;
+            const file = argv.file;
             readFile(file)
             .then((data) => {
                 return minify(file, data);
@@ -46,7 +46,7 @@ yargs
             });
         },
         handler: (argv) => {
-            const file = __dirname + path.sep + argv.file;
+            const file = argv.file;
             readFile(file)
             .then((data) => {
                 return format(file, data);
@@ -73,7 +73,7 @@ yargs
             });
         },
         handler: (argv) => {
-            const file = __dirname + path.sep + argv.file;
+            const file = argv.file;
             const extension = path.extname(file);
             const newFile = (extension === '.xml') ? file.replace(extension, '.json') : file.replace(extension, '.xml');
             readFile(file)
