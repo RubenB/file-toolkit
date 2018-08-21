@@ -1,6 +1,6 @@
 {
   "name": "file-toolkit",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "description": "A file CLI tool to format, minify and parse files. Current filetypes supported are XML and JSON",
   "main": "index.js",
   "repository": {
@@ -32,7 +32,7 @@
   "dependencies": {
     "pretty-data": "^0.40.0",
     "xml2js": "^0.4.19",
-    "yargs": "^11.0.0"
+    "yargs": "^11.1.0"
   },
   "preferGlobal": true,
   "bin": {
