@@ -1,0 +1,33 @@
+{
+  "name": "file-toolkit",
+  "version": "0.5.0",
+  "description": "A file CLI tool to format, minify and parse files. Current filetypes supported are XML and JSON",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "formatter",
+    "format",
+    "parser",
+    "parse",
+    "minifier",
+    "minify",
+    "uglify",
+    "pretty",
+    "prettify",
+    "xml",
+    "json",
+    "cli",
+    "filetoolkit",
+    "file-toolkit",
+    "toolkit"
+  ],
+  "author": "Ruben Bielen",
+  "license": "MIT",
+  "dependencies": {
+    "pretty-data": "^0.40.0",
+    "xml2js": "^0.4.19",
+    "yargs": "^11.0.0"
+  }
+}
