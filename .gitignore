@@ -71,3 +71,10 @@ typings/
 
 # Serverless directories
 .serverless
+json\.json
+
+json\.xml
+
+xml\.json
+
+xml\.xml
