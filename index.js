@@ -17,10 +17,17 @@ yargs
                 describe: 'A xml or json file',
                 type: 'string'
             });
+            yargs.option('encoding', {
+                alias: 'enc',
+                default: 'utf8',
+                describe: 'Pass the encoding of the source file',
+                type: 'string'
+            });
         },
         handler: (argv) => {
             const file = argv.file;
-            readFile(file)
+            const encoding = argv.encoding;
+            readFile(file, encoding)
             .then((data) => {
                 return minify(file, data);
             })
@@ -40,14 +47,21 @@ yargs
         aliases: ['f'],
         desc: 'Format a file', 
         builder: (yargs) => {
-            return yargs.positional('file', {
+            yargs.positional('file', {
                 describe: 'A xml or json file',
+                type: 'string'
+            });
+            yargs.option('encoding', {
+                alias: 'enc',
+                default: 'utf8',
+                describe: 'Pass the encoding of the source file',
                 type: 'string'
             });
         },
         handler: (argv) => {
             const file = argv.file;
-            readFile(file)
+            const encoding = argv.encoding;
+            readFile(file, encoding)
             .then((data) => {
                 return format(file, data);
             })
@@ -71,12 +85,19 @@ yargs
                 describe: 'A xml or json file',
                 type: 'string'
             });
+            yargs.option('encoding', {
+                alias: 'enc',
+                default: 'utf8',
+                describe: 'Pass the encoding of the source file',
+                type: 'string'
+            });
         },
         handler: (argv) => {
             const file = argv.file;
+            const encoding = argv.encoding;
             const extension = path.extname(file);
             const newFile = (extension === '.xml') ? file.replace(extension, '.json') : file.replace(extension, '.xml');
-            readFile(file)
+            readFile(file, encoding)
             .then((data) => {
                 return parse(file, data);
             })
