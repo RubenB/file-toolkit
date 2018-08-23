@@ -1,6 +1,6 @@
 {
   "name": "file-toolkit",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A file CLI tool to format, minify and parse files. Current filetypes supported are XML and JSON",
   "main": "index.js",
   "repository": {
@@ -9,6 +9,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/RubenB/file-toolkit/issues"
   },
   "keywords": [
     "formatter",
